@@ -1,0 +1,44 @@
+{
+  "expo": {
+    "name": "Breeze",
+    "slug": "breeze",
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "Breeze listens to your breathing to move the game. Nothing is recorded or stored."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/favicon.png",
+      "name": "Breeze — breathing game"
+    },
+    "plugins": [
+      "expo-audio",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Breeze to use the camera as the game background."
+        }
+      ]
+    ],
+    "newArchEnabled": true
+  }
+}
